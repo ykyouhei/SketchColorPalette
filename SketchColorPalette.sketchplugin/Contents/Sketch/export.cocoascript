@@ -28,12 +28,12 @@ function onRun(context) {
 
 function fillColorFromShape(shape) {
   let fill  = shape.style().fills().firstObject();
-  var red   = fill.color().red().toFixed(3).toString();
-  var green = fill.color().green().toFixed(3).toString();
-  var blue  = fill.color().blue().toFixed(3).toString();
-  var alpha = fill.color().alpha().toFixed(3).toString();
+  var red   = fill.color().red();
+  var green = fill.color().green();
+  var blue  = fill.color().blue();
+  var alpha = fill.color().alpha();
 
-  var color = [NSColor colorWithRed:red green:green blue:blue alpha:alpha];
+  var color = [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:alpha];
   return color
 }
 
