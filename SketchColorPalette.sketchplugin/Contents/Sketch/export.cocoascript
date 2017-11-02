@@ -33,7 +33,7 @@ function fillColorFromShape(shape) {
   var blue  = fill.color().blue();
   var alpha = fill.color().alpha();
 
-  var color = [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:alpha];
+  var color = [NSColor colorWithSRGBRed:red green:green blue:blue alpha:alpha];
   return color
 }
 
